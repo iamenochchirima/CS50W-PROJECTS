@@ -1,0 +1,76 @@
+/* For INDEX.HTML page */
+.search_box {
+    color: #555;
+    line-height: 40px;
+    padding-bottom: 48px;
+}
+.logo {
+    padding-top: 60px;
+    padding-bottom: 25px;
+    align-self: center;
+}
+
+.icon {
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: middle;
+    background-position: 15px;
+    text-indent: 45px;
+    border-radius: 25px;
+    border: 1px solid #caaeae;
+    outline: none;
+}
+    
+.search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border:0px;
+    outline: none;
+}
+.lucky {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border:0px;
+    outline: none;
+}
+
+.search2 {
+    float: right;
+    padding-block: 6px;
+    border: 1px solid #fdfcfc;
+    background-color: #fdfcfc;
+}
+.search3 {
+    float: right;
+    padding-block: 6px;
+    border: 1px solid #fdfcfc;
+    background-color: #fdfcfc;
+}
+
+.google_button1 {
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+
+/* For IMAGE.HTML page */
+
+.search1 {
+    float: right;
+    padding-block: 6px;
+    border: 1px solid #caaeae;
+}
+
+.google_button {
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+/* Advanced search */
+
+
