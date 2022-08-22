@@ -1,3 +1,3 @@
 # Java
 
-Java is an object oriented programming language
+Java is programming language

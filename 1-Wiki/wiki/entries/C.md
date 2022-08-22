@@ -1,3 +1,3 @@
-#C
+# C
 
-C is a programming language
+C is a low level programming language

@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+   {{title}}
+{% endblock %}
+
+{% block body %}
+   {% csrf_token %}
+   {{ entry|safe }}
+   <a class="btn btn-outline-secondary" href="{{entry}}/edit" role="button">Edit</a>
+{% endblock %}
