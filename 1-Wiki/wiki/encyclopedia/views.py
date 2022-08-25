@@ -73,21 +73,18 @@ def new_entry(request):
                 return render(request, "encyclopedia/new_entry_error.html")
 
 def edit(request, entry):
+    entry_view = util.get_entry(entry)
+    
+    form = NewEntryForm()
+    form.fields['title'].initial = entry
+    form.fields['content'].initial = entry_view
+    form.fields['edit'].initial = True
 
-    if request.method == "POST":
-
-        entry_view = util.get_entry(entry)
-        
-        form = NewEntryForm()
-        form.fields['title'].initial = entry
-        form.fields['content'].initial = entry_view
-        form.fields['edit'].initial = True
-
-        return render(request, "encyclopedia/create_entry.html", {
-            "form": form,
-            "edit": form.fields['edit'].initial,
-            "title": form.fields['title'].initial
-        })
+    return render(request, "encyclopedia/create_entry.html", {
+        "form": form,
+        "edit": form.fields['edit'].initial,
+        "title": form.fields['title'].initial
+    })
 
 def random(request):
     entries = util.list_entries()

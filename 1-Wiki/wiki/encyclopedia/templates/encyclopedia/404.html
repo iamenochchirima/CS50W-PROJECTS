@@ -5,5 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1>404: Page not found</h1>
+    <h1>Sorry, the entry you entered is not yet available</h1>
+
+    <p>You can create the new entry <a href="{% url 'create_entry' %}">here</a> instead if you want</p>
 {% endblock %}
