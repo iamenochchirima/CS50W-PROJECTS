@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django import forms
+from django.urls import reverse
 import secrets
 
 from . import util
@@ -73,18 +74,20 @@ def new_entry(request):
 
 def edit(request, entry):
 
-    entry_view = util.get_entry(entry)
+    if request.method == "POST":
 
-    form = NewEntryForm()
-    form.fields['title'].initial = entry
-    form.fields['content'].initial = entry_view
-    form.fields['edit'].initial = True
+        entry_view = util.get_entry(entry)
+        
+        form = NewEntryForm()
+        form.fields['title'].initial = entry
+        form.fields['content'].initial = entry_view
+        form.fields['edit'].initial = True
 
-    return render(request, "encyclopedia/create_entry.html", {
-        "form": form,
-        "edit": form.fields['edit'].initial,
-        "title": form.fields['title'].initial
-    })
+        return render(request, "encyclopedia/create_entry.html", {
+            "form": form,
+            "edit": form.fields['edit'].initial,
+            "title": form.fields['title'].initial
+        })
 
 def random(request):
     entries = util.list_entries()
