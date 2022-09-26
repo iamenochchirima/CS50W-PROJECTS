@@ -17,62 +17,47 @@
     padding-top: 20px;
 }
 
-.advanced_container {
-    margin: 45px 45px;
+.form-container {
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    padding: 50px;
+    gap: 20px;
 
-    label {
-        display: inline-block;
-        width: 16%;
-        font-weight: 500;
-        color: rgb(104, 88, 88);
-        
+    .col1 {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
     }
 
-    .blank_space {
-        display: inline-block;
-        width: 50%;
+    .col2 {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
     }
 
-    .form-row {
-        align-items: center;
-        margin-top: 10px;
-
-        .form_label {
-            display: inline-block;
-            width: 16%;
-            font-size: 90%; 
-        }
-
-        input[type="text"] {
-            width: 50%;
-        }
-
-        .explanation {
-            font-size: 70%;
-            font-weight: 500;
-            color: rgb(104, 88, 88);
-            padding-left: 10px;
-            display:inline;
-        }
-
-        .monospace {
-            font-family: monospace;
-            font-size: 80%;
-        }
-
-        .right-align {
-            width: 12%;
-            position: relative;
-            height: 30px;
-            float: right;
-            margin-right: 410px;
-            .advance {
-                color: rgb(248, 245, 245);
-                background-color: rgb(71, 71, 236);
-                border: none;
-                outline: none;
+    .col3 {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
     
-            }
-        }
-    }
+
+label {
+    color: rgb(104, 88, 88);      
+}
+
+.explanation {
+    font-size: 70%;
+    font-weight: 500;
+    color: rgb(104, 88, 88);
+    padding-left: 10px;
+}
+
+.advance {
+    color: rgb(248, 245, 245);
+    background-color: rgb(71, 71, 236);
+    border: none;
+    outline: none;
+}
+
 }
